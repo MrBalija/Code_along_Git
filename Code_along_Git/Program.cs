@@ -8,6 +8,7 @@ namespace Code_along_Git
         static void Main(string[] args)
         {
             /*
+            //ÖVNING 1:
             //Ett sätt
             int[] arrayOfNumbers = new int[5];
 
@@ -36,21 +37,42 @@ namespace Code_along_Git
             }
 
             Console.WriteLine(arrayOfNumbers.Contains(2));
-            */
+            
 
 
-            //ÖVNING 2
+            //ÖVNING 2:
             //Ett sätt
             int[] firstOne = new int[10] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
             int[] secondOne = new int[10] { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
 
-            //Console.WriteLine(string.Join(',', firstOne));
-            //Console.WriteLine(string.Join(',', secondOne));
-
+            Console.WriteLine(string.Join(',', firstOne));
+            Console.WriteLine(string.Join(',', secondOne));
 
             //Ett annat sätt
             Console.WriteLine(string.Join(',', firstOne));
-            Console.WriteLine(string.Join(',', firstOne.Reverse()));
+            Console.WriteLine(string.Join(',', firstOne.Reverse()));*/
+
+
+
+            //ÖVNING 3:
+            string[] stringArray = new string[] { "Januari", "Februari", "Mars", "April", "Maj", "Juni", "Juli", "Augusti", "September", "Oktober", "November", "December" };
+
+            string number;
+            int choice;
+
+            do
+            {
+
+                Console.WriteLine("Select a number from 1-12");
+                number = Console.ReadLine();
+                choice = Convert.ToInt32(number);
+
+                if (choice <= 12)
+                {
+                    Console.WriteLine(stringArray[choice - 1]);
+                }
+
+            } while (choice <= 12);
 
         }
     }
